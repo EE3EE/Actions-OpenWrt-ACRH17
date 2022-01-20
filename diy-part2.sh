@@ -10,7 +10,8 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-
+# autocore
+sed -i 's/DEPENDS:=@(.*/DEPENDS:=@(TARGET_bcm27xx||TARGET_bcm53xx||TARGET_ipq40xx||TARGET_ipq806x||TARGET_ipq807x||TARGET_mvebu||TARGET_rockchip||TARGET_armvirt) \\/g' package/lean/autocore/Makefile
 
 
 # 添加额外软件包
